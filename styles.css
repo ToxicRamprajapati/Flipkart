@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2874f0; /* Flipkart's primary color */
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#search {
+    flex: 2;
+    margin: 6px 6px; /* Adds spacing between search bar and logo/cart */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#cart-count {
+    margin-right: 5px; /* Spacing between count and cart icon */
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #search {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .cart {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+/* Product Grid Styles */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.product-card p {
+    color: #888;
+    margin: 0.5rem 0;
+}
+
+.product-card button {
+    background-color: #2874F0;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #1e5bb8;
+}
+
+/* Phone View - Two Products per Row */
+@media (max-width: 480px) {
+    .product-card {
+        width: 45%; /* Adjusts to show two products per row */
+    }
+}
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #2874f0;
+    color: white;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+header .cart {
+    position: relative;
+}
+
+.hero-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    header input[type="text"] {
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .hero-section img {
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 769px) {
+    .hero-section img {
+        height: 270px;
+        object-fit: cover;
+    }
+}
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    width: 100%;
+    display: none; /* Hide all slides initially */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-slide.active {
+    display: block; /* Display only the active slide */
+}
+
+/* Add basic styles for navigation buttons */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-slide img {
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 769px) {
+    .carousel-slide img {
+        height: 270px;
+        object-fit: cover;
+    }
+}
